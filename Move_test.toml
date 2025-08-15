@@ -1,0 +1,14 @@
+[package]
+name    = "alpha_points"
+version = "0.1.1"
+authors = ["Alpha4 Team"]
+edition = "2024.alpha"
+
+[addresses]
+alpha_points = "0x0"
+sui = "0x2"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+
+[dev-dependencies]
