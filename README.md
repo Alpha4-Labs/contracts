@@ -11,7 +11,7 @@ This **audit branch** contains the **simplified, audit-ready version** of the Al
 
 This branch contains **simplified contracts focused exclusively on core business logic** for security audit purposes. Complex governance, staking, lending, and DeFi features have been removed while preserving 100% of essential business functionality.
 
-## 🏗️ Simplified Repository Structure
+## 🏗️ Clean Repository Structure
 
 ```
 ├── sources/                    # Simplified Move smart contracts
@@ -22,15 +22,20 @@ This branch contains **simplified contracts focused exclusively on core business
 │   ├── generation_simple.move  # Partner integration system (11 functions)
 │   ├── integration_simple.move # User redemption endpoints (6 functions)
 │   ├── oracle_simple.move      # Price feeds for USDC/SUI (15 functions)
-│   └── *.disabled             # Original v2/v3 contracts (preserved but disabled)
-├── tests/                     # Comprehensive test suite (55 tests, 98.2% passing)
+│   ├── simplification/         # Detailed simplification analysis docs
+│   └── archive/                # Original v2/v3 contracts (28 files, preserved)
+├── tests/                     # Comprehensive test suite (8 files, 55 tests, 98.2% passing)
 │   ├── core_simple_tests.move
 │   ├── critical_admin_tests.move
 │   ├── critical_ledger_tests.move
 │   ├── advanced_coverage_tests.move
 │   ├── perk_focused_tests.move
 │   ├── generation_focused_tests.move
-│   └── *.disabled             # Original test files (preserved)
+│   ├── missing_coverage_tests.move
+│   ├── extended_coverage_tests.move
+│   └── archive/                # Original test files (37 files, preserved)
+├── AUDIT_README.md            # Comprehensive audit branch overview
+├── CRITICAL_BUSINESS_LOGIC_AUDIT.md # Detailed simplification analysis
 ├── Move.toml                  # Package manifest
 └── Move.lock                  # Dependency lock file
 ```
